@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.over.mapper.UserMapper" >
+
+    <insert id="insert" parameterType="com.over.pojo.User">
+      insert into t_user(id,name,password,phone)
+      values(#{id,jdbcType=INTEGER},#{name, jdbcType=VARCHAR},#{password, jdbcType=VARCHAR},#{phone, jdbcType=VARCHAR});
+    </insert>
+
+    <select id="selectUsers" resultType="com.over.pojo.User">
+        select * from t_user
+    </select>
+
+
+</mapper>
